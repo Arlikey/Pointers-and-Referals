@@ -8,7 +8,7 @@ void randInitArr(int* arr, int size) {
 }
 
 void showArr(int* arr, int size) {
-	cout << "Ìàññèâ: ";
+	cout << "ÐœÐ°ÑÑÐ¸Ð²: ";
 	for (int i = 0; i < size; i++) {
 		cout << arr[i] << " ";
 	}
@@ -20,7 +20,7 @@ void sumAndMulArr(int* arr, int size, int* sum, int* mul) {
 		*(sum) += arr[i];
 		*(mul) *= arr[i];
 	}
-	cout << "Óêàçàòåëè: " << endl;
+	cout << "Ð£ÐºÐ°Ð·Ð°Ñ‚ÐµÐ»Ð¸: " << endl;
 }
 
 void sumAndMulArr(int* arr, int size, int& sum, int& mul) {
@@ -28,7 +28,7 @@ void sumAndMulArr(int* arr, int size, int& sum, int& mul) {
 		sum += arr[i];
 		mul *= arr[i];
 	}
-	cout << "Ññûëêè: " << endl;
+	cout << "Ð¡ÑÑ‹Ð»ÐºÐ¸: " << endl;
 }
 
 int main() {
@@ -41,7 +41,7 @@ int main() {
 	int& refMul = rmul;
 
 	int size;
-	cout << "Ââåäèòå ðàçìåð ìàññèâà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 	cin >> size;
 	int* arr = new int[size];
 
@@ -50,13 +50,13 @@ int main() {
 
 	sumAndMulArr(arr, size, ptrSum, ptrMul);
 
-	cout << "\nÑóììà ýëåìåíòîâ: " << psum << endl;
-	cout << "Ïðîèçâåäåíèå ýëåìåíòîâ: " << pmul << endl;
+	cout << "\nÐ¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << psum << endl;
+	cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << pmul << endl;
 
 	sumAndMulArr(arr, size, refSum, refMul);
 
-	cout << "\nÑóììà ýëåìåíòîâ: " << rsum << endl;
-	cout << "Ïðîèçâåäåíèå ýëåìåíòîâ: " << rmul << endl;
+	cout << "\nÐ¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << rsum << endl;
+	cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << rmul << endl;
 
 	return 0;
 }
